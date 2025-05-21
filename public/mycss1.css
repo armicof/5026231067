@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #F7F7F7;
+    font-family: 'Inter';
+}
+p {
+    color: #854836;
+}
+
+a:link {
+    text-decoration: none;
+    color: #854836;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #854836;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #854836;
+    font-weight: bold;
+}
+
+.formatheader {
+    font-size : larger;
+}
+
+.mask {
+    -webkit-mask-image: url(tes.png);
+    mask-image: url(tes.png);
+  }
+
+.masking {
+    -webkit-mask-image: url(tes.png);
+    mask-image: url(tes.png);
+    mask-repeat: no-repeat;
+}
