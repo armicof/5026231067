@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/land', function () {
+    return view('land');
+});
+
 Route::get('halo', function () {
 	return "<h2>Halo, Selamat datang di tutorial laravel www.malasngoding.com</h2>";
 });
@@ -19,8 +23,8 @@ Route::get('blog', function () {
 
 Route::get('hello', [Link::class, 'helloworld']);
 
-Route::get('index', function () {
-	return view('index');
+Route::get('linktree', function () {
+	return view('linktree');
 });
 
 Route::get('js1', function () {
@@ -39,8 +43,13 @@ Route::get('uts', function () {
     return view('uts');
 });
 
-Route::get('biodata', [Link::class, 'index']);
-Route::get('pegawai/{nama}', [PegawaiController::class, 'index']);
+Route::get('template1', function () {
+    return view('template1');
+});
+
+
+// Route::get('biodata', [Link::class, 'index']);
+// Route::get('pegawai/{nama}', [PegawaiController::class, 'index']);
 
 // route formulir
 Route::get('/formulir', [PegawaiController::class, 'formulir']);
@@ -51,4 +60,11 @@ Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
-
+// route pegawai
+Route::get('/pegawai', [PegawaiController::class, 'index']);
+Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
+Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah']);
+Route::post('/pegawai/store', [PegawaiController::class, 'store']);
+Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
+Route::post('/pegawai/update', [PegawaiController::class, 'update']);
+Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
