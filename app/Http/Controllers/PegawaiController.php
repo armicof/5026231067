@@ -11,10 +11,10 @@ class PegawaiController extends Controller
 	public function index()
 	{
     		// mengambil data dari table pegawai
-		$pegawai = DB::table('pegawai')->get();
+		$pegawai = DB::table('pegawai')->paginate(10);
 
     		// mengirim data pegawai ke view index
-		return view('index',['pegawai' => $pegawai]);
+		return view('crud/index',['pegawai' => $pegawai]);
 
 	}
 
@@ -22,20 +22,21 @@ class PegawaiController extends Controller
 	{
 		// menangkap data pencarian
 		$cari = $request->cari;
+        $val = $request->old('cari');
 
     		// mengambil data dari table pegawai sesuai pencarian data
 		$pegawai = DB::table('pegawai')
 		->where('pegawai_nama','like',"%".$cari."%")
-        ->paginate(10);
+        ->paginate();
 
     		// mengirim data pegawai ke view index
-		return view('search',['pegawai' => $pegawai]);
+		return view('crud/index',['pegawai' => $pegawai, 'cari' => $cari]);
 	}
 
 	public function tambah()
     {
 
-        return view('tambah');
+        return view('crud/tambah');
     }
 
 	public function store(Request $request)
@@ -56,7 +57,7 @@ class PegawaiController extends Controller
 		$pegawai = DB::table('pegawai')->where('pegawai_id', $id)->get();
 
 		// passing data pegawai yang didapat ke view edit
-		return view('edit', ['pegawai' => $pegawai]);
+		return view('crud/edit', ['pegawai' => $pegawai]);
 	}
 
 	public function update(Request $request)

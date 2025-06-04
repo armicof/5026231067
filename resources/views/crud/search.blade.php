@@ -25,7 +25,7 @@
 
 	<br/>
 
-	<table border="1">
+	<table class="table table-striped">
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
