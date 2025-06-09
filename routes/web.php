@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TasController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -69,9 +70,16 @@ Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 
-
-
 // template
 Route::get('/template', function () {
     return view('template');
 });
+
+// Route tas
+Route::get('/tas', [TasController::class, 'index']);
+Route::get('/tas/cari', [TasController::class, 'cari']);
+Route::get('/tas/tambah', [TasController::class, 'tambah']);
+Route::post('/tas/store', [TasController::class, 'store']);
+Route::get('/tas/edit/{id}', [TasController::class, 'edit']);
+Route::post('/tas/update', [TasController::class, 'update']);
+Route::get('/tas/hapus/{id}', [TasController::class, 'hapus']);
