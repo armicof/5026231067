@@ -6,7 +6,7 @@
 <p>Cari Data Pegawai :</p>
 	<form action="/pegawai/cari" method="GET">
 		<input type="text" class="form-control" name="cari" placeholder="Cari Pegawai .." ">
-		<input type="submit" value="CARI">
+		<input type="submit" value="CARI" class="btn btn-primary">
 	</form>
 
 <br/>

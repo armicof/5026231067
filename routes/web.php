@@ -5,6 +5,8 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TasController;
+use App\Http\Controllers\KaryawanController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -83,3 +85,12 @@ Route::post('/tas/store', [TasController::class, 'store']);
 Route::get('/tas/edit/{id}', [TasController::class, 'edit']);
 Route::post('/tas/update', [TasController::class, 'update']);
 Route::get('/tas/hapus/{id}', [TasController::class, 'hapus']);
+
+// Route karyawan
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
+Route::post('/karyawan/update', [KaryawanController::class, 'update']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
