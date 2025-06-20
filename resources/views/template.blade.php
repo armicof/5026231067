@@ -27,7 +27,7 @@
     <nav class="navbar navbar-expand-sm bg-light">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">All Front End</a>
+                <a class="nav-link" href="/land">All Front End</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/pegawai">Pegawai</a>
@@ -36,7 +36,7 @@
                 <a class="nav-link" href="/tas">Tugas CRUD</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">EAS</a>
+                <a class="nav-link" href="/eas">EAS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/keranjangbelanja">Latihan 1</a>
